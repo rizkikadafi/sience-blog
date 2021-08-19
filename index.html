@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&family=Open+Sans+Condensed:wght@300;700&family=Oswald:wght@600&family=Roboto:wght@300;700&family=Teko&display=swap" rel="stylesheet">
+    <!-- Swiper css -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <!-- My Stylesheet -->
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <title>Sience Blog</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <section class="left">
+        <!-- Navbar -->
+        <div class="navbar">
+          <!-- <div class="mobile-search">
+            <input id="mobile-input" type="text" placeholder="Search..."">
+            <div class="search-icon">
+              <i class="bi bi-search"></i>
+              <i class="bi bi-x"></i>
+            </div>
+          </div> -->
+          <h1 class="logo"><a href="#">Sience Blog</a></h1>
+          <nav>
+            <i class="bi bi-search"></i>
+            <div class="menu-toggle">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Archive</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+        <!-- Akhir Navbar -->
+
+        <!-- Mobile Search Overlay -->
+        <div class="mobile-search-overlay">
+          <i class="bi bi-x-lg"></i>
+          <div class="mobile-search">
+            <input
+              oninput="updateResult(this.value)"
+              type="text"
+              placeholder="Search..."
+            />
+            <!-- <div class="results-list">
+              <ul></ul>
+            </div> -->
+          </div>
+        </div>
+
+        <div class="bg-slider">
+          <div class="slide-wrapper">
+            <div class="slide-item">
+              <img src="img/bg2.jpg" class="slide-item__image" />
+            </div>
+            <div class="slide-item">
+              <img src="img/bg10.jpg" class="slide-item__image" />
+            </div>
+            <div class="slide-item">
+              <img src="img/bg4.jpg" class="slide-item__image" />
+            </div>
+            <div class="slide-item">
+              <img src="img/bg5.jpg" class="slide-item__image" />
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-container main-swiper">
+          <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+              <div class="blog">
+                <div class="blog-info">
+                  <div class="text-wrapper">
+                    <div class="info-wrapper">
+                      <span class="blog-author">
+                        <i class="bi bi-person-circle"></i> Muhamad Rizki Kadafi
+                      </span>
+                      <span class="blog-time">
+                        <i class="bi bi-clock"></i> 26 Juni 2021
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="blog-title">
+                  <div class="text-wrapper">
+                    <div class="title-wrapper">
+                      <h2>Blog Title</h2>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="blog-label">
+                  <div class="text-wrapper">
+                    <div class="label-wrapper">
+                      <span><a href="#">Biologi</a></span>
+                      <span><a href="#">Genetik</a></span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="blog-desc">
+                  <div class="text-wapper">
+                    <div class="desc-wrapper">
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        In reiciendis asperiores recusandae minus ex vitae quam
+                        dicta odio delectus fugiat eligendi cum, veritatis et
+                        provident. Itaque eius aspernatur mollitia similique.
+                        Enim quam explicabo in perferendis!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="btn-detail-wrapper">
+                  <div class="text-wrapper">
+                    <div class="detail-wrapper">
+                      <div class="btn-detail">
+                        <a href="#" class="link">
+                          <span class="mask">
+                            <div class="link-container">
+                              <span class="link-title link-title1"
+                                >Baca Selengkapnya</span
+                              >
+                              <span class="link-title link-title2"
+                                >Baca Selengkapnya</span
+                              >
+                            </div>
+                          </span>
+                          <div class="link-icon">
+                            <i class="bi bi-arrow-right icon"></i>
+                            <i class="bi bi-arrow-right icon"></i>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+              <div class="blog">
+                <div class="blog-info">
+                  <div class="text-wrapper">
+                    <div class="info-wrapper">
+                      <span class="blog-author">
+                        <i class="bi bi-person-circle"></i> Muhamad Rizki Kadafi
+                      </span>
+                      <span class="blog-time">
+                        <i class="bi bi-clock"></i> 26 Juni 2021
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="blog-title">
+                  <div class="text-wrapper">
+                    <div class="title-wrapper">
+                      <h2>Blog Title</h2>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="blog-label">
+                  <div class="text-wrapper">
+                    <div class="label-wrapper">
+                      <span><a href="#">Kimia</a></span>
+                      <span><a href="#">Elektrokimia</a></span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="blog-desc">
+                  <div class="text-wapper">
+                    <div class="desc-wrapper">
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        In reiciendis asperiores recusandae minus ex vitae quam
+                        dicta odio delectus fugiat eligendi cum, veritatis et
+                        provident. Itaque eius aspernatur mollitia similique.
+                        Enim quam explicabo in perferendis!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="btn-detail-wrapper">
+                  <div class="text-wrapper">
+                    <div class="detail-wrapper">
+                      <div class="btn-detail">
+                        <a href="#" class="link">
+                          <span class="mask">
+                            <div class="link-container">
+                              <span class="link-title link-title1"
+                                >Baca Selengkapnya</span
+                              >
+                              <span class="link-title link-title2"
+                                >Baca Selengkapnya</span
+                              >
+                            </div>
+                          </span>
+                          <div class="link-icon">
+                            <i class="bi bi-arrow-right icon"></i>
+                            <i class="bi bi-arrow-right icon"></i>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="swiper-slide">
+              <div class="blog">
+                <div class="blog-info">
+                  <div class="text-wrapper">
+                    <div class="info-wrapper">
+                      <span class="blog-author">
+                        <i class="bi bi-person-circle"></i> Muhamad Rizki Kadafi
+                      </span>
+                      <span class="blog-time">
+                        <i class="bi bi-clock"></i> 26 Juni 2021
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="blog-title">
+                  <div class="text-wrapper">
+                    <div class="title-wrapper">
+                      <h2>Blog Title</h2>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="blog-label">
+                  <div class="text-wrapper">
+                    <div class="label-wrapper">
+                      <span><a href="#">Matematika</a></span>
+                      <span><a href="#">Integral</a></span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="blog-desc">
+                  <div class="text-wapper">
+                    <div class="desc-wrapper">
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        In reiciendis asperiores recusandae minus ex vitae quam
+                        dicta odio delectus fugiat eligendi cum, veritatis et
+                        provident. Itaque eius aspernatur mollitia similique.
+                        Enim quam explicabo in perferendis!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="btn-detail-wrapper">
+                  <div class="text-wrapper">
+                    <div class="detail-wrapper">
+                      <div class="btn-detail">
+                        <a href="#" class="link">
+                          <span class="mask">
+                            <div class="link-container">
+                              <span class="link-title link-title1"
+                                >Baca Selengkapnya</span
+                              >
+                              <span class="link-title link-title2"
+                                >Baca Selengkapnya</span
+                              >
+                            </div>
+                          </span>
+                          <div class="link-icon">
+                            <i class="bi bi-arrow-right icon"></i>
+                            <i class="bi bi-arrow-right icon"></i>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Slide 4 -->
+            <div class="swiper-slide">
+              <div class="blog">
+                <div class="blog-info">
+                  <div class="text-wrapper">
+                    <div class="info-wrapper">
+                      <span class="blog-author">
+                        <i class="bi bi-person-circle"></i> Muhamad Rizki Kadafi
+                      </span>
+                      <span class="blog-time">
+                        <i class="bi bi-clock"></i> 26 Juni 2021
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="blog-title">
+                  <div class="text-wrapper">
+                    <div class="title-wrapper">
+                      <h2>Blog Title</h2>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="blog-label">
+                  <div class="text-wrapper">
+                    <div class="label-wrapper">
+                      <span><a href="#">Fisika</a></span>
+                      <span><a href="#">Atom</a></span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="blog-desc">
+                  <div class="text-wapper">
+                    <div class="desc-wrapper">
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        In reiciendis asperiores recusandae minus ex vitae quam
+                        dicta odio delectus fugiat eligendi cum, veritatis et
+                        provident. Itaque eius aspernatur mollitia similique.
+                        Enim quam explicabo in perferendis!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="btn-detail-wrapper">
+                  <div class="text-wrapper">
+                    <div class="detail-wrapper">
+                      <div class="btn-detail">
+                        <a href="#" class="link">
+                          <span class="mask">
+                            <div class="link-container">
+                              <span class="link-title link-title1"
+                                >Baca Selengkapnya</span
+                              >
+                              <span class="link-title link-title2"
+                                >Baca Selengkapnya</span
+                              >
+                            </div>
+                          </span>
+                          <div class="link-icon">
+                            <i class="bi bi-arrow-right icon"></i>
+                            <i class="bi bi-arrow-right icon"></i>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-container thumbs-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="slider-image">
+                <img src="./img/biology_glide.jpg" alt="biologi" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slider-image">
+                <img src="./img/chemistry_glide.jpg" alt="biologi" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slider-image">
+                <img src="./img/math2_glide.jpg" alt="biologi" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slider-image">
+                <img src="./img/physic_glide.jpg" alt="biologi" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slider-nav">
+          <div class="scene-nav scene-nav--prev">
+            <span data-nav="previous">Prev</span>
+            <div class="overlay"></div>
+          </div>
+          <div class="separator"></div>
+          <div class="scene-nav scene-nav--next">
+            <span data-nav="next">Next</span>
+            <div class="overlay"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="right">
+        <!-- Search -->
+        <div class="search-wrapper">
+          <input id="right-input" type="text" placeholder="Search..." />
+          <span>Search</span>
+          <div class="search">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-search"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+              />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-x-lg"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M1.293 1.293a1 1 0 0 1 1.414 0L8 6.586l5.293-5.293a1 1 0 1 1 1.414 1.414L9.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414L8 9.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707a1 1 0 0 1 0-1.414z"
+              />
+            </svg>
+          </div>
+        </div>
+        <!-- Akhir Seaarch -->
+
+        <!-- Social -->
+        <div class="social-wrapper">
+          <div class="social">
+            <p>Social</p>
+            <span class="line"></span>
+            <div class="social-logo">
+              <a href="#"><i class="bi bi-instagram"></i></a>
+              <a href="#"><i class="bi bi-twitter"></i></a>
+              <a href="#"><i class="bi bi-github"></i></a>
+            </div>
+          </div>
+        </div>
+        <!-- Akhir Social -->
+
+        <div class="bullets-wrapper">
+          <div class="bullets"></div>
+        </div>
+      </section>
+    </header>
+    <!-- Akhir Header -->
+
+    <!-- Blog Post -->
+    <div class="blog-post">
+      <div class="heading">
+        <h2>Blog Post</h3>
+        <span>Latets Blog</span>
+      </div>
+
+      <div class="post-container">
+        <div class="post">
+          <div class="post-thumbnail">
+            <img src="./img/sm-thumb/thumb1.jpg" alt="">
+          </div>
+          <div class="post-body">
+            <div class="post-date">
+              <span class="month">Jul</span>
+              <span class="day">11</span>
+            </div>
+            <div class="post-label">
+              <span><a href="#">Biologi</a></span>
+            </div>
+            <div class="post-title">
+              <h5>Blog Title</h5>
+            </div>
+            <div class="post-desc">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
+                quasi a eos, unde sunt pariatur.
+              </p>
+            </div>
+            <div class="btn-detail">
+              <a href="#" class="link">
+                <span class="mask">
+                  <div class="link-container">
+                    <span class="link-title link-title1"
+                      >Baca Selengkapnya</span
+                    >
+                    <span class="link-title link-title2"
+                      >Baca Selengkapnya</span
+                    >
+                  </div>
+                </span>
+                <div class="link-icon">
+                  <i class="bi bi-arrow-right icon"></i>
+                  <i class="bi bi-arrow-right icon"></i>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="post-footer">
+            <span class="author"><i class="bi bi-person-circle"></i> Muhamad Rizki Kadafi</span>
+            <span class="comments"><i class="bi bi-chat-fill"></i> 15</span>
+          </div>
+        </div>
+        <div class="post">
+          <div class="post-thumbnail">
+            <img src="./img/sm-thumb/thumb1.jpg" alt="">
+          </div>
+          <div class="post-body">
+            <div class="post-date">
+              <span class="month">Jul</span>
+              <span class="day">11</span>
+            </div>
+            <div class="post-label">
+              <span><a href="#">Biologi</a></span>
+            </div>
+            <div class="post-title">
+              <h5>Blog Title</h5>
+            </div>
+            <div class="post-desc">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
+                quasi a eos, unde sunt pariatur.
+              </p>
+            </div>
+            <div class="btn-detail">
+              <a href="#" class="link">
+                <span class="mask">
+                  <div class="link-container">
+                    <span class="link-title link-title1"
+                      >Baca Selengkapnya</span
+                    >
+                    <span class="link-title link-title2"
+                      >Baca Selengkapnya</span
+                    >
+                  </div>
+                </span>
+                <div class="link-icon">
+                  <i class="bi bi-arrow-right icon"></i>
+                  <i class="bi bi-arrow-right icon"></i>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="post-footer">
+            <span class="author"><i class="bi bi-person-circle"></i> Muhamad Rizki Kadafi</span>
+            <span class="comments"><i class="bi bi-chat-fill"></i> 15</span>
+          </div>
+        </div>
+        <div class="post">
+          <div class="post-thumbnail">
+            <img src="./img/sm-thumb/thumb1.jpg" alt="">
+          </div>
+          <div class="post-body">
+            <div class="post-date">
+              <span class="month">Jul</span>
+              <span class="day">11</span>
+            </div>
+            <div class="post-label">
+              <span><a href="#">Biologi</a></span>
+            </div>
+            <div class="post-title">
+              <h5>Blog Title</h5>
+            </div>
+            <div class="post-desc">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
+                quasi a eos, unde sunt pariatur.
+              </p>
+            </div>
+            <div class="btn-detail">
+              <a href="#" class="link">
+                <span class="mask">
+                  <div class="link-container">
+                    <span class="link-title link-title1"
+                      >Baca Selengkapnya</span
+                    >
+                    <span class="link-title link-title2"
+                      >Baca Selengkapnya</span
+                    >
+                  </div>
+                </span>
+                <div class="link-icon">
+                  <i class="bi bi-arrow-right icon"></i>
+                  <i class="bi bi-arrow-right icon"></i>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="post-footer">
+            <span class="author"><i class="bi bi-person-circle"></i> Muhamad Rizki Kadafi</span>
+            <span class="comments"><i class="bi bi-chat-fill"></i> 15</span>
+          </div>
+        </div>
+        <div class="post">
+          <div class="post-thumbnail">
+            <img src="./img/sm-thumb/thumb1.jpg" alt="">
+          </div>
+          <div class="post-body">
+            <div class="post-date">
+              <span class="month">Jul</span>
+              <span class="day">11</span>
+            </div>
+            <div class="post-label">
+              <span><a href="#">Biologi</a></span>
+            </div>
+            <div class="post-title">
+              <h5>Blog Title</h5>
+            </div>
+            <div class="post-desc">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
+                quasi a eos, unde sunt pariatur.
+              </p>
+            </div>
+            <div class="btn-detail">
+              <a href="#" class="link">
+                <span class="mask">
+                  <div class="link-container">
+                    <span class="link-title link-title1"
+                      >Baca Selengkapnya</span
+                    >
+                    <span class="link-title link-title2"
+                      >Baca Selengkapnya</span
+                    >
+                  </div>
+                </span>
+                <div class="link-icon">
+                  <i class="bi bi-arrow-right icon"></i>
+                  <i class="bi bi-arrow-right icon"></i>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="post-footer">
+            <span class="author"><i class="bi bi-person-circle"></i> Muhamad Rizki Kadafi</span>
+            <span class="comments"><i class="bi bi-chat-fill"></i> 15</span>
+          </div>
+        </div>
+        <div class="post">
+          <div class="post-thumbnail">
+            <img src="./img/sm-thumb/thumb1.jpg" alt="">
+          </div>
+          <div class="post-body">
+            <div class="post-date">
+              <span class="month">Jul</span>
+              <span class="day">11</span>
+            </div>
+            <div class="post-label">
+              <span><a href="#">Biologi</a></span>
+            </div>
+            <div class="post-title">
+              <h5>Blog Title</h5>
+            </div>
+            <div class="post-desc">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
+                quasi a eos, unde sunt pariatur.
+              </p>
+            </div>
+            <div class="btn-detail">
+              <a href="#" class="link">
+                <span class="mask">
+                  <div class="link-container">
+                    <span class="link-title link-title1"
+                      >Baca Selengkapnya</span
+                    >
+                    <span class="link-title link-title2"
+                      >Baca Selengkapnya</span
+                    >
+                  </div>
+                </span>
+                <div class="link-icon">
+                  <i class="bi bi-arrow-right icon"></i>
+                  <i class="bi bi-arrow-right icon"></i>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="post-footer">
+            <span class="author"><i class="bi bi-person-circle"></i> Muhamad Rizki Kadafi</span>
+            <span class="comments"><i class="bi bi-chat-fill"></i> 15</span>
+          </div>
+        </div>
+        <div class="post">
+          <div class="post-thumbnail">
+            <img src="./img/sm-thumb/thumb1.jpg" alt="">
+          </div>
+          <div class="post-body">
+            <div class="post-date">
+              <span class="month">Jul</span>
+              <span class="day">11</span>
+            </div>
+            <div class="post-label">
+              <span><a href="#">Biologi</a></span>
+            </div>
+            <div class="post-title">
+              <h5>Blog Title</h5>
+            </div>
+            <div class="post-desc">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
+                quasi a eos, unde sunt pariatur.
+              </p>
+            </div>
+            <div class="btn-detail">
+              <a href="#" class="link">
+                <span class="mask">
+                  <div class="link-container">
+                    <span class="link-title link-title1"
+                      >Baca Selengkapnya</span
+                    >
+                    <span class="link-title link-title2"
+                      >Baca Selengkapnya</span
+                    >
+                  </div>
+                </span>
+                <div class="link-icon">
+                  <i class="bi bi-arrow-right icon"></i>
+                  <i class="bi bi-arrow-right icon"></i>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="post-footer">
+            <span class="author"><i class="bi bi-person-circle"></i> Muhamad Rizki Kadafi</span>
+            <span class="comments"><i class="bi bi-chat-fill"></i> 15</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Akhir Blog Post -->
+
+    <!-- Labels -->
+    <div class="main-labels">
+      <div class="heading">
+        <h2>Labels</h3>
+        <span>Main Labels</span>
+      </div>
+
+      <div class="labels-container">
+        <a href="#" class="label">
+          <img src="./img/label/biologi.png" alt="biologi" class="biologi">           
+          <p>Biologi</p>
+        </a>
+        <a href="#" class="label">
+          <img src="./img/label/kimia.png" alt="kimia" class="kimia">          
+          <p>Kimia</p>
+        </a>
+        <a href="#" class="label">
+          <img src="./img/label/matematika.png" alt="matematika" class="mtk">                   
+          <p>Matematika</p>
+        </a>
+        <a href="#" class="label">
+          <img src="./img/label/fisika.png" alt="fisika" class="fisika">
+          <p>Fisika</p>
+        </a>
+      </div>
+    </div>
+    
+    <!-- Akhir Labels -->
+
+    <!-- Popular Post -->
+    <div class="popular-post">
+      <div class="heading">
+        <h2>Popular Post</h3>
+        <span>Most Viewed Blog</span>
+      </div>
+
+      <div class="popular-post-container">
+        <div class="detail-post">
+          <div class="detail-post-wrapper">
+            <div class="post">
+              <div class="post-thumbnail">
+                <img src="./img/sm-thumb/thumb1.jpg" alt="">
+              </div>
+              <div class="post-body">
+                <div class="post-info">
+                  <span class="post-author">
+                    <i class="bi bi-person-circle"></i> Muhamad Rizki Kadafi
+                  </span>
+                  <span class="post-time">
+                    <i class="bi bi-clock"></i> 26 Juni 2021
+                  </span>
+                </div>
+                <div class="post-label">
+                  <span><a href="#">Biologi</a></span>
+                </div>
+                <div class="post-title">
+                  <h5>Blog Title</h5>
+                </div>
+                <div class="post-desc">
+                  <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate vitae aliquid reiciendis nulla repudiandae veritatis rerum atque magni ea eveniet!
+                  </p>
+                </div>
+                <div class="btn-detail">
+                  <a href="#" class="link">
+                    <span class="mask">
+                      <div class="link-container">
+                        <span class="link-title link-title1"
+                          >Baca Selengkapnya</span
+                        >
+                        <span class="link-title link-title2"
+                          >Baca Selengkapnya</span
+                        >
+                      </div>
+                    </span>
+                    <div class="link-icon">
+                      <i class="bi bi-arrow-right icon"></i>
+                      <i class="bi bi-arrow-right icon"></i>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="thumb-post">
+          <img src="./img/sm-thumb/thumb1.jpg" alt="">
+          <div class="thumb-overlay">
+            <div class="data-wrapper">
+              <h3>Blog Title</h3>
+              <div class="desc">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, quidem omnis consequatur placeat porro cupiditate?</p>
+              </div>
+              <div class="read-more">
+                <span>Baca Selengkapnya</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="thumb-post">
+          <img src="./img/sm-thumb/thumb1.jpg" alt="">
+          <div class="thumb-overlay">
+            <div class="data-wrapper">
+              <h3>Blog Title</h3>
+              <div class="desc">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, quidem omnis consequatur placeat porro cupiditate?</p>
+              </div>
+              <div class="read-more">
+                <span>Baca Selengkapnya</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="thumb-post">
+          <img src="./img/sm-thumb/thumb1.jpg" alt="">
+          <div class="thumb-overlay">
+            <div class="data-wrapper">
+              <h3>Blog Title</h3>
+              <div class="desc">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, quidem omnis consequatur placeat porro cupiditate?</p>
+              </div>
+              <div class="read-more">
+                <span>Baca Selengkapnya</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="thumb-post">
+          <img src="./img/sm-thumb/thumb1.jpg" alt="">
+          <div class="thumb-overlay">
+            <div class="data-wrapper">
+              <h3>Blog Title</h3>
+              <div class="desc">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, quidem omnis consequatur placeat porro cupiditate?</p>
+              </div>
+              <div class="read-more">
+                <span>Baca Selengkapnya</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="thumb-post">
+          <img src="./img/sm-thumb/thumb1.jpg" alt="">
+          <div class="thumb-overlay">
+            <div class="data-wrapper">
+              <h3>Blog Title</h3>
+              <div class="desc">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, quidem omnis consequatur placeat porro cupiditate?</p>
+              </div>
+              <div class="read-more">
+                <span>Baca Selengkapnya</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="thumb-post">
+          <img src="./img/sm-thumb/thumb1.jpg" alt="">
+          <div class="thumb-overlay">
+            <div class="data-wrapper">
+              <h3>Blog Title</h3>
+              <div class="desc">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, quidem omnis consequatur placeat porro cupiditate?</p>
+              </div>
+              <div class="read-more">
+                <span>Baca Selengkapnya</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Akhir Popular Post -->
+
+    <!-- Contact -->
+    <div class="contact">
+      <div class="heading">
+        <h2>Contact</h3>
+        <span>Contact With Me</span>
+      </div>
+
+      <form action="" class="contact-form">
+        <div class="contact-wrapper">
+          <div class="input-data">
+            <input type="text" name="name" id="name" autocomplete="off" required>
+            <label for="name">Nama</label>
+          </div>
+          <div class="input-data">
+            <input type="email" name="email" id="email" autocomplete="off" required>
+            <label for="email">E-mail</label>
+          </div>
+          <div class="input-data">
+            <textarea name="massage" id="massage" required></textarea>
+            <label for="massage">Pesan</label>
+          </div>
+          <div class="btn-submit-wrapper">
+            <div class="btn-submit">
+              <span>Kirim</span> 
+              <i class="bi bi-chevron-right"></i>
+          </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <!-- Akhir Contact -->
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-text">
+        <span>Copyright © 2021. Design by <b><a href="">Muhamad Rizki Kadafi</a></b></span>
+      </div>
+    </footer>
+    <!-- Akhir Footer -->
+
+    <!-- Pixi Js -->
+    <script src="./js/pixi.min.js"></script>
+    
+    <!-- Gsap -->
+    <script src="./js/TweenMax.min.js"></script>
+
+    <!-- Swiper Js -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Distort -->
+    <script src="./js/distortion.js"></script>
+
+    <script src="js/tilt.js"></script>
+
+    <!-- My Script -->
+    <script src="./js/main.js"></script>
+  </body>
+</html>
